@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1752563661606",
+    "latitude": 22.724608,
+    "longitude": 75.8775808,
+    "timestamp": 1752563659992,
+    "address": null
+  },
+  {
+    "id": "1752563671079",
+    "latitude": 26.2420634,
+    "longitude": 78.201323,
+    "timestamp": 1752563670870,
+    "address": null
+  },
+  {
+    "id": "1752563680562",
+    "latitude": 26.2420634,
+    "longitude": 78.201323,
+    "timestamp": 1752563680533,
+    "address": null
+  },
+  {
+    "id": "1752563690718",
+    "latitude": 26.2420634,
+    "longitude": 78.201323,
+    "timestamp": 1752563690658,
+    "address": null
+  }
+]

@@ -5,7 +5,8 @@
 
 **A full-stack web app that helps users track their location, monitor network status, and view nearby places using modern Web APIs.**
 
-🔗 [Live Demo](https://smart-travel-companion.vercel.app)
+🔗 [Live Demo](https://smart-travel-companion-app.vercel.app)
+💻 [API Health](https://smart-travel-companion.onrender.com/api/health)
 📂 [Source Code](https://github.com/shibbu04/smart-travel-companion)
 
 ---
@@ -92,7 +93,9 @@ Frontend at `http://localhost:3000`
 
 ## 🔌 API Endpoints
 
-**Base URL:** `http://localhost:5000/api`
+**Development Base URL:** `http://localhost:5000/api`
+**Production Base URL:** `https://smart-travel-companion.onrender.com/api`
+
 
 * `GET /locations` – Get all saved locations
 * `POST /locations` – Add new location
