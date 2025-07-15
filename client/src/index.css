@@ -20,4 +20,12 @@
   .btn-secondary {
     @apply bg-white/90 text-primary-600 px-6 py-3 rounded-lg font-semibold border border-primary-200 hover:bg-primary-50 transition-all duration-200 transform hover:scale-105;
   }
+  
+  .mobile-status-indicator {
+    @apply w-2 h-2 rounded-full;
+  }
+  
+  .mobile-header-compact {
+    @apply text-sm font-medium truncate;
+  }
 }

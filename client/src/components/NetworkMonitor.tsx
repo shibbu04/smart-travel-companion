@@ -61,7 +61,7 @@ const NetworkMonitor: React.FC<NetworkMonitorProps> = ({ networkInfo, isOnline }
   };
 
   return (
-    <div className="flex items-center space-x-3 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+    <div className="hidden sm:flex items-center space-x-3 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
       {getConnectionTypeIcon()}
       <div className="text-sm">
         <div className="font-medium text-gray-800">

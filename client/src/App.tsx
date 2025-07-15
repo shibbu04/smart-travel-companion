@@ -146,12 +146,31 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
       {/* Header */}
       <header className="glass-card rounded-none border-0 border-b border-white/20 p-4 mb-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-7xl mx-auto">
+          {/* Mobile Header */}
+          <div className="flex items-center justify-between lg:hidden">
+            <div className="flex items-center space-x-2">
+              <div className="p-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg">
+                <Navigation className="w-5 h-5 text-white" />
+              </div>
+              <h1 className="text-lg font-bold text-gray-800 truncate">
+                {APP_CONFIG.NAME}
+              </h1>
+            </div>
+            
+            {/* Mobile Status Indicators */}
+            <div className="flex items-center space-x-2">
+              <div className={`w-3 h-3 rounded-full ${getServerStatusColor().replace('text-', 'bg-')}`}></div>
+              <div className={`w-3 h-3 rounded-full ${isOnline ? 'bg-green-500' : 'bg-red-500'}`}></div>
+            </div>
+          </div>
+
+          {/* Desktop Header */}
+          <div className="hidden lg:flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg">
               <Navigation className="w-6 h-6 text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-800">Smart Travel Companion</h1>
             <h1 className="text-2xl font-bold text-gray-800">{APP_CONFIG.NAME}</h1>
           </div>
           
@@ -166,6 +185,24 @@ function App() {
             
             {/* Network Monitor */}
             <NetworkMonitor networkInfo={networkInfo} isOnline={isOnline} />
+          </div>
+          </div>
+
+          {/* Mobile Status Details (Collapsible) */}
+          <div className="lg:hidden mt-3 grid grid-cols-2 gap-2">
+            <div className="flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-2 py-1 rounded-lg border border-white/20">
+              <Server className={`w-3 h-3 ${getServerStatusColor()}`} />
+              <span className={`text-xs font-medium ${getServerStatusColor()}`}>
+                {getServerStatusText()}
+              </span>
+            </div>
+            
+            <div className="flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-2 py-1 rounded-lg border border-white/20">
+              {!isOnline ? <WifiOff className="w-3 h-3 text-red-500" /> : <Wifi className="w-3 h-3 text-green-500" />}
+              <span className="text-xs font-medium text-gray-700">
+                {networkInfo.type ? networkInfo.type.toUpperCase() : 'Unknown'}
+              </span>
+            </div>
           </div>
         </div>
       </header>
